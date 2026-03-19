@@ -6783,13 +6783,6 @@ import {
 		},
 	}
 
-	// Setup identity schema
-	p.GetResourceIdentitySchemasResponse = &providers.GetResourceIdentitySchemasResponse{
-		IdentitySchemas: map[string]providers.ResourceIdentitySchema{
-			"test_instance": identitySchema,
-		},
-	}
-
 	// Capture the import request to verify identity was passed correctly
 	var capturedImportRequest providers.ImportResourceStateRequest
 
