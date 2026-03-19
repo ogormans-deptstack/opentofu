@@ -74,10 +74,10 @@ type ResourceInstanceObjectSrc struct {
 	CreateBeforeDestroy bool
 	SkipDestroy         bool
 
-	// TODO: godoc
-	IdentityJSON []byte
-
-	// TODO: godoc
+	// IdentityJSON contains a JSON-encoded representation of the resourcde identity for this
+	// resource instance. Similar to AttrsJSON, this is handled in JSON format because
+	// schema versions change over time.
+	IdentityJSON          []byte
 	IdentitySchemaVersion *uint64
 }
 
